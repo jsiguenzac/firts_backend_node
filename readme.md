@@ -23,3 +23,12 @@ npm install ts-node -D
 npm install swagger-autogen
 generar doc automagicamente:
 npx ts-node src/swagger-autogen-config.ts
+
+para generar los modelos de tablas existentes automáticamente:
+npm i typeorm-model-generator -D
+
+ejecutar para crear modelos:
+npx typeorm-model-generator -h localhost -d app_ultima_milla -u postgres -x sql -e postgres -o ./src/models
+
+necesario:
+npm i reflect-metadata
