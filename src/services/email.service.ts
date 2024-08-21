@@ -30,16 +30,14 @@ export const sendMeEmailService = async (req: EmailSchema, res: Response) => {
             </html>
         `;
         await emailService.sendEmail(personalEmail, subjectTitle, body);
-        return res.status(200).send(
-            exitJson(1, {
+        return exitJson(1, {
             'exito': true,
             'mensaje': 'CORREO_ENVIADO'	
-        }));
+        });
     } catch (err) {
-        return res.status(500).send(
-            exitJson(0, {
+        return exitJson(0, {
             'exito': false,
             'mensaje': (err as any).message
-        }));
+        });
     }
 }

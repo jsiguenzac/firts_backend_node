@@ -5,7 +5,6 @@ const router = Router(
     {mergeParams: true}
 );
 
-
 /**
  * @swagger
  * /Email/Me:
