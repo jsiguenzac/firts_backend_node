@@ -4,7 +4,7 @@ export interface IRoles {
     description: string;
 }
 
-export interface IRolesList {
-    total: number;
-    roles: IRoles[];
+export interface IParamRolesList {
+    page: number;
+    limit: number;
 }

@@ -32,3 +32,16 @@ npx typeorm-model-generator -h localhost -d app_ultima_milla -u postgres -x sql 
 
 necesario:
 npm i reflect-metadata
+
+# para envio de correo:
+npm i nodemailer
+npm i @types/nodemailer
+
+Debe generar su clave unica en gmail: https://myaccount.google.com/u/0/apppasswords
+configurar en archivo .env en la raiz del proyecto:
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=465
+EMAIL_ADDRESS=your_email@gmail.com
+EMAIL_PASSWORD=your_password
+
+iniciar en server en local: npm run dev

@@ -1,4 +1,4 @@
-import { IRoles, IRolesList } from "../interfaces/Iroles";
+import { IRoles, IParamRolesList } from "../interfaces/Iroles";
 
 export class RolSchema implements IRoles {
     id: number;
@@ -12,13 +12,12 @@ export class RolSchema implements IRoles {
     }
 }
 
-export class RolSchemaList implements IRolesList {
-    total: number;
-    roles: RolSchema[];
+export class ParamRolSchemaList implements IParamRolesList {
+    page: number;
+    limit: number;
 
-    constructor(total: number, roles: RolSchema[]) {
-        this.total = total;
-        this.roles = roles;
-
+    constructor(page: number, limit: number) {
+        this.page = page;
+        this.limit = limit;
     }
 }
