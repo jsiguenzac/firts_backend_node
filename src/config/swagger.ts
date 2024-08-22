@@ -2,6 +2,8 @@ import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import { Express } from 'express';
 import 'dotenv/config';
+import path from 'path'
+
 
 // Configuración de Swagger
 const swaggerDefinition = {
@@ -21,7 +23,9 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
-  apis: ['./src/routes/*.ts'], // Ruta a tus archivos de rutas
+  //apis: ['./src/routes/*{.ts, .js}']
+  //apis: ['./build/routes/*.js'], // Ruta a los archivos generados de JS
+  apis: [`${path.join(__dirname, './routes/*')}`]
 };
 
 const swaggerSpec = swaggerJsdoc(options);

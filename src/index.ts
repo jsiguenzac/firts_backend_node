@@ -35,4 +35,5 @@ function startServer() {
     });
 }
 
-startServer();
+//startServer();
+module.exports = app;

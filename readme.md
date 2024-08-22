@@ -45,3 +45,9 @@ EMAIL_ADDRESS=your_email@gmail.com
 EMAIL_PASSWORD=your_password
 
 iniciar en server en local: npm run dev
+
+# Configurar deploy en vercel:
+* npm install -g vercel
+* vercel login
+* vercel
+

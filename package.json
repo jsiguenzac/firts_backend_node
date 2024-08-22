@@ -4,7 +4,9 @@
   "description": "instalar librerias de manera global:\r npm i typescript ts-node nodemon -g",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/app.ts"
+    "dev": "nodemon ./src/index.ts",
+    "build": "tsc",
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "",
